@@ -89,3 +89,4 @@ func (s *Server) Route() *mux.Router {
 	r.PathPrefix("").Handler(commonChain.Then(http.StripPrefix("/img", http.FileServer(http.Dir("./img")))))
 	return r
 }
+

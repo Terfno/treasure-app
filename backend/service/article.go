@@ -59,10 +59,10 @@ func (a *Article) Destroy(id int64) error {
 	return nil
 }
 
-func (a *Article) Create(newArticle *model.Article) (int64, error) {
+func (a *Article) Create(newArticle *model.Article, id int64) (int64, error) {
 	var createdId int64
 	if err := dbutil.TXHandler(a.db, func(tx *sqlx.Tx) error {
-		result, err := repository.CreateArticle(tx, newArticle)
+		result, err := repository.CreateArticle(tx, newArticle, id)
 		if err != nil {
 			return err
 		}

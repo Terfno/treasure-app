@@ -55,13 +55,15 @@ func (a *Article) Show(w http.ResponseWriter, r *http.Request) (int, interface{}
 }
 
 func (a *Article) Create(w http.ResponseWriter, r *http.Request) (int, interface{}, error) {
+	user ,_ := httputil.GetUserFromContext(r.Context())
+
 	newArticle := &model.Article{}
 	if err := json.NewDecoder(r.Body).Decode(&newArticle); err != nil {
 		return http.StatusBadRequest, nil, err
 	}
 
 	articleService := service.NewArticleService(a.dbx)
-	id, err := articleService.Create(newArticle)
+	id, err := articleService.Create(newArticle, user.ID)
 	if err != nil {
 		return http.StatusInternalServerError, nil, err
 	}
