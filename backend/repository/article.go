@@ -9,7 +9,7 @@ import (
 
 func AllArticle(db *sqlx.DB) ([]model.Article, error) {
 	a := make([]model.Article, 0)
-	if err := db.Select(&a, `SELECT id, title, body FROM article`); err != nil {
+	if err := db.Select(&a, `SELECT id, user_id, title, body FROM article`); err != nil {
 		return nil, err
 	}
 	return a, nil
@@ -18,7 +18,7 @@ func AllArticle(db *sqlx.DB) ([]model.Article, error) {
 func FindArticle(db *sqlx.DB, id int64) (*model.Article, error) {
 	a := model.Article{}
 	if err := db.Get(&a, `
-SELECT id, title, body FROM article WHERE id = ?
+SELECT id, user_id, title, body FROM article WHERE id = ?
 `, id); err != nil {
 		return nil, err
 	}
@@ -27,7 +27,7 @@ SELECT id, title, body FROM article WHERE id = ?
 
 func CreateArticle(db *sqlx.Tx, a *model.Article) (sql.Result, error) {
 	stmt, err := db.Prepare(`
-INSERT INTO article (title, body) VALUES (?, ?)
+INSERT INTO article (user_id, title, body) VALUES (?, ?)
 `)
 	if err != nil {
 		return nil, err
