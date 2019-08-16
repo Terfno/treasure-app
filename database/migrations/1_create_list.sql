@@ -1,9 +1,12 @@
 -- +goose Up
-CREATE TABLE list(
-  id int(2) UNSIGNED NOT NULL AUTO_INCREMENT,
-  name VARCHAR(200) NOT NULL,
-  PRIMARY KEY (id)
+CREATE TABLE list (
+  id int(2)
+  UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR
+  (200) NOT NULL,
+  PRIMARY KEY
+  (id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---  + goose Down
+-- +goose Down
 DROP TABLE list;
