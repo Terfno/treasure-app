@@ -24,7 +24,7 @@ migrate/status:
 migrate/up:
 	@goose -dir migrations mysql "$(DATASOURCE)" up
 
-__migrate/down:
+migrate/down:
 	@goose -dir migrations mysql "$(DATASOURCE)" down
 
 init: install docker-compose/up migrate/init migrate/up
