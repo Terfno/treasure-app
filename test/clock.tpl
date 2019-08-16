@@ -3,11 +3,16 @@
 
   <head>
     <title>{{.Date}} | {{.Time}}</title>
+    <style>
+      .hoge{
+        color:brown;
+      }
+    </style>
   </head>
 
   <body>
-    <p>Date={{.Date}}</p>
-    <p>Time={{.Time}}</p>
+    <div class="hoge">Date={{.Date}}</div>
+    <div class="huga">Time={{.Time}}</div>
   </body>
 
 </html>
