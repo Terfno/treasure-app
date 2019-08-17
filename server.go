@@ -11,28 +11,34 @@ import (
 func handlerTop(w http.ResponseWriter, r *http.Request) {
 	tpl := template.Must(template.ParseFiles("./template/top.tpl"))
 
-	shuffle := shuffle(generate(30))
-
 	m := map[string]string{
 		"Service": "Fresheat",
-		"data": inttostr(shuffle),
+		"data":    SliceToString(IntToStrForSlice(shuffle(generate(30)))),
 	}
 
 	tpl.Execute(w, m)
 }
 
 func main() {
-	http.HandleFunc("/top", handlerTop)
+	http.HandleFunc("/", handlerTop)
 
 	fmt.Println("now listen at 8080")
 	http.ListenAndServe(":8080", nil)
 }
 
-func inttostr(data []int) []string {
-	str := []string{}
-	lr := len(data)
+func SliceToString(slice []string) string {
+	var str string
+	for _, v := range slice {
+		str += v
+	}
+	return str
+}
 
-	for i := 0; i < lr; i++ {
+func IntToStrForSlice(data []int) []string {
+	str := []string{}
+	cnt := len(data)
+
+	for i := 0; i < cnt; i++ {
 		str[i] = string(data[i])
 	}
 
