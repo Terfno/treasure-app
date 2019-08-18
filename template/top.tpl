@@ -32,6 +32,8 @@
         display: table-cell;
         vertical-align: middle;
         margin: auto, 10vw, auto;
+        font-size: 35pt;
+        margin: 0%;
       }
 
       h1 {
@@ -59,7 +61,7 @@
   <body>
     <div>
       <div class="intermedius">
-        <h1>INTER MEDIUS</h1>
+        INTER MEDIUS
       </div>
     </div>
     <div style="
@@ -92,14 +94,6 @@
       font-family: 'Roboto', sans-serif;
       font-weight: 100;">
         <p>You can also browse past seat information.</p>
-      </div>
-      <div style="
-      color: var(--white);
-      font-family: 'Quicksand', sans-serif;
-      font-weight: 300;">
-        <h3>{{.data_1}}</h3>
-        <h3>{{.data_2}}</h3>
-        <h3>{{.data_3}}</h3>
       </div>
     </div>
     <div style="

@@ -4,7 +4,9 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"math/rand"
 	"net/http"
+	"time"
 
 	_ "github.com/go-sql-driver/mysql"
 
@@ -19,9 +21,12 @@ func main() {
 	}
 	defer db.Close()
 
-	fmt.Println("でーたべーすてすと:" + gosql.IDName(1, db))
+	rand.Seed(time.Now().UnixNano())
+	pretestfix := rand.Intn(30)
+	fmt.Println("でーたべーすてすと:" + string(pretestfix) + gosql.IDName(pretestfix, db))
 
 	http.HandleFunc("/", handle.HandleRoot)
+	http.HandleFunc("/gen", handle.HandleGen)
 
 	fmt.Println("now listen at 8080")
 	http.ListenAndServe(":8080", nil)
