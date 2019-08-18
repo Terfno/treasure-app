@@ -19,10 +19,12 @@
 
       h1 {
         font-size: 35pt;
+        margin: 0%;
       }
 
       h2 {
         font-size: 23pt;
+        margin: 0%;
       }
 
       h3 {
@@ -31,6 +33,7 @@
 
       p {
         font-size: 13pt;
+        margin: 0%;
       }
 
       body {
@@ -38,80 +41,77 @@
         margin: 0%;
       }
 
-      header {
-        height: 10vh;
-        width: 100vw;
-      }
-
-      footer {
-        height: 10vh;
-        width: 100vw;
-      }
-
-      .logo {
-        color: var(--black);
-        font-family: 'Josefin Sans', sans-serif;
-        font-weight: 100;
-      }
-
-      .menu {
-        color: var(--black);
-        font-family: 'Roboto', sans-serif;
-        font-weight: 100;
-      }
-
-      .mid {
-        background: var(--gradient_b);
-        height: 80vh;
-        width: 100vw;
-      }
-
-      .fresheat {
-        color: var(--white);
-        font-family: 'Oswald', sans-serif;
-      }
-
-      .greet {
-        color: var(--white);
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-      }
-
-      .freshbutton {
-        color: var(--white);
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 300;
-      }
-
     </style>
   </head>
 
   <body>
-    <header>
-      headerだお
-    </header>
-    <div class="mid">
-      <div class="fresheat">
+    <div>
+      <div style="
+      height: 10vh;
+      widows: 100vw;
+      background-color: var(--white);
+      color: var(--black);
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      display:table-cell;
+      vertical-align: middle;">
+        <h1>INTER MEDIUS</h1>
+      </div>
+    </div>
+    <div style="
+    background: var(--gradient_b);
+    height: 80vh;
+    width: 100vw;
+    ">
+      <div style="
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      ">
         <h1>{{.Service}}</h1>
       </div>
-      <div class="greet">
+      <div style="
+      color: var(--white);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      ">
         <h2>It is an application that changes your seat to something nice.</h2>
       </div>
-      <div>
-        <p style="color: var(--white)">Hold past seat information and carry out seat replacement without duplication.</p>
+      <div style="
+      color: var(--white);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;">
+        <p>Hold past seat information and carry out seat replacement without duplication.
+        </p>
       </div>
-      <div>
-        <p style="color: var(--white)">You can also browse past seat information.</p>
+      <div style="
+      color: var(--white);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;">
+        <p>You can also browse past seat information.</p>
       </div>
-      <div>
+      <div style="
+      color: var(--white);
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 300;">
         <h3>{{.data_1}}</h3>
         <h3>{{.data_2}}</h3>
         <h3>{{.data_3}}</h3>
       </div>
     </div>
-    <footer>
-      footerだお
-    </footer>
+    <div style="
+    position: relative;
+    height: 10vh;
+    widows: 100vw;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    ">
+      <p style="
+      position:absolute;
+      bottom: 0%;
+      width: 100%;
+      text-align: center;
+      ">copyright © 2019 Takahito Sueda terfno All Rights Reserved.</p>
+    </div>
   </body>
 
 </html>
