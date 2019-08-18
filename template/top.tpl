@@ -104,7 +104,9 @@
         <p style="color: var(--white)">You can also browse past seat information.</p>
       </div>
       <div>
-        <h3>{{.data}}</h3>
+        <h3>{{.data_1}}</h3>
+        <h3>{{.data_2}}</h3>
+        <h3>{{.data_3}}</h3>
       </div>
     </div>
     <footer>
