@@ -17,6 +17,23 @@
         --white: #fbfbfb;
       }
 
+      body {
+        overflow: hidden;
+        margin: 0%;
+      }
+
+      .intermedius {
+        height: 10vh;
+        widows: 100vw;
+        background-color: var(--white);
+        color: var(--black);
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 100;
+        display: table-cell;
+        vertical-align: middle;
+        margin: auto, 10vw, auto;
+      }
+
       h1 {
         font-size: 35pt;
         margin: 0%;
@@ -36,25 +53,12 @@
         margin: 0%;
       }
 
-      body {
-        overflow: hidden;
-        margin: 0%;
-      }
-
     </style>
   </head>
 
   <body>
     <div>
-      <div style="
-      height: 10vh;
-      widows: 100vw;
-      background-color: var(--white);
-      color: var(--black);
-      font-family: 'Josefin Sans', sans-serif;
-      font-weight: 100;
-      display:table-cell;
-      vertical-align: middle;">
+      <div class="intermedius">
         <h1>INTER MEDIUS</h1>
       </div>
     </div>
