@@ -106,7 +106,6 @@
       <div>
         <h3>{{.data}}</h3>
       </div>
-
     </div>
     <footer>
       footerだお

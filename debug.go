@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"strconv"
 	"time"
 )
 
@@ -16,8 +17,8 @@ func main() {
 	castSlice := IntToStrForSlice(sflSlice)
 	fmt.Println(castSlice)
 
-	// convSlice := SliceToString(castSlice)
-	// fmt.Println(convSlice)
+	convSlice := SliceToString(castSlice)
+	fmt.Println(convSlice)
 }
 
 func generate(n int) []int {
@@ -46,7 +47,7 @@ func IntToStrForSlice(data []int) []string {
 	str := make([]string, len(data))
 
 	for i, v := range data {
-		str[i] = string(v)
+		str[i] = strconv.Itoa(v)
 	}
 
 	return str
@@ -55,7 +56,7 @@ func IntToStrForSlice(data []int) []string {
 func SliceToString(slice []string) string {
 	var str string
 	for _, v := range slice {
-		str += v
+		str += v + ", "
 	}
 	return str
 }
