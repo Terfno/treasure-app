@@ -1,0 +1,42 @@
+-- +goose Up
+INSERT INTO list VALUES(00,'あらた');
+INSERT INTO list VALUES(01,'りょうちゃん');
+INSERT INTO list VALUES(02,'ひろき');
+INSERT INTO list VALUES(03,'かつや');
+INSERT INTO list VALUES(04,'キッチン');
+INSERT INTO list VALUES(05,'とむ');
+INSERT INTO list VALUES(06,'電電');
+INSERT INTO list VALUES(07,'くぎ');
+INSERT INTO list VALUES(08,'りく');
+INSERT INTO list VALUES(09,'nasa');
+INSERT INTO list VALUES(10,'てるふの');
+INSERT INTO list VALUES(11,'しんや');
+INSERT INTO list VALUES(12,'りょう');
+INSERT INTO list VALUES(13,'ぎーたか');
+INSERT INTO list VALUES(14,'たじまん');
+INSERT INTO list VALUES(15,'つむ');
+INSERT INTO list VALUES(16,'なおき');
+INSERT INTO list VALUES(17,'たか');
+INSERT INTO list VALUES(18,'ウォーリー');
+INSERT INTO list VALUES(19,'だんて');
+INSERT INTO list VALUES(20,'カズ');
+INSERT INTO list VALUES(21,'ゆうちゃん');
+INSERT INTO list VALUES(22,'ふじい');
+INSERT INTO list VALUES(23,'よしじ');
+INSERT INTO list VALUES(24,'まえちゃん');
+INSERT INTO list VALUES(25,'まっきー');
+INSERT INTO list VALUES(26,'おじさん');
+INSERT INTO list VALUES(27,'りゅう');
+INSERT INTO list VALUES(28,'タツヤ');
+INSERT INTO list VALUES(29,'てっちゃん');
+
+-- +goose Down
+DROP TABLE list;
+CREATE TABLE list (
+  id int(2)
+  UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR
+  (200) NOT NULL,
+  PRIMARY KEY
+  (id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

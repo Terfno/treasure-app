@@ -28,3 +28,9 @@ migrate/down:
 	@goose -dir migrations mysql "$(DATASOURCE)" down
 
 init: install docker-compose/up migrate/init migrate/up
+
+# reset
+# make mysql
+# drop database treasure_app;
+# create database treasure_app;
+# use treasure_app;
