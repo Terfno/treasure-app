@@ -23,8 +23,12 @@
       }
 
       .intermedius {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 2px;
+        padding-bottom: 2px;
         height: 10vh;
-        widows: 100vw;
+        width: 100vw;
         background-color: var(--white);
         color: var(--black);
         font-family: 'Josefin Sans', sans-serif;
@@ -37,33 +41,56 @@
       }
 
       .mid {
+        padding-top: 2px;
+        padding-bottom: 2px;
         background: var(--gradient_b);
         height: 80vh;
         width: 100vw;
       }
 
       .service {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         color: var(--white);
         font-family: 'Oswald', sans-serif;
       }
 
       .concept {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 2px;
+        padding-bottom: 20px;
         color: var(--white);
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
       }
 
       .message {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 2px;
+        padding-bottom: 2px;
         color: var(--white);
         font-family: 'Roboto', sans-serif;
         font-weight: 100;
+      }
+
+      .generate {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        color: var(--white);
+        font-weight: 100;
+        font-family: 'Quicksand', sans-serif;
       }
 
       .foot {
         position: relative;
         height: 10vh;
         widows: 100vw;
-        font-family: 'Josefin Sans', sans-serif;
         font-weight: 100;
       }
 
@@ -72,6 +99,7 @@
         bottom: 0%;
         width: 100%;
         text-align: center;
+        font-family: 'Quicksand', sans-serif;
       }
 
       h1 {
@@ -110,11 +138,16 @@
         <h2>It is an application that changes your seat to something nice.</h2>
       </div>
       <div class="message">
-        <p>Hold past seat information and carry out seat replacement without duplication.
-        </p>
+        <div>
+          <p>Hold past seat information and carry out seat replacement without duplication.
+          </p>
+        </div>
+        <div>
+          <p>You can also browse past seat information.</p>
+        </div>
       </div>
-      <div class="message">
-        <p>You can also browse past seat information.</p>
+      <div class="generate">
+        <h2><a href="./gen" style="color:var(--white)">fresh our seat ></a></h2>
       </div>
     </div>
     <div class="foot">
