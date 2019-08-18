@@ -11,7 +11,7 @@ func NLog(index int, db *sql.DB) string {
 	err := db.QueryRow(`select map from log limit ?,1`, index).Scan(&seatlog)
 
 	if err == sql.ErrNoRows {
-		log.Fatalln("no log")
+		return "nil"
 	} else if err != nil {
 		log.Fatalln(err)
 	}

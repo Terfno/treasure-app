@@ -1,21 +1,38 @@
 package main
 
 import (
+	"database/sql"
 	"fmt"
+	"log"
+	_ "github.com/go-sql-driver/mysql"
 
+	"./gosql"
 	"./shuffle"
 )
 
 func main() {
-	rndslice := shuffle.Shuffle(shuffle.Generate(30))
+	db, err := sql.Open("mysql", "root:password@tcp(127.0.0.1:3306)/treasure_app")
+	if err != nil {
+		log.Fatal("db error / fail connect db")
+	}
+	defer db.Close()
 
-	for i := 0; i < 30; i++ {
-		if 0 <= i && i < 10 {
-			fmt.Print(rndslice[i])
-		} else if 10 <= i && i < 20 {
-			fmt.Print(rndslice[i])
-		} else if 20 < i && i < 30 {
-			fmt.Print(rndslice[i])
+	data := shuffle.Generate(30)
+
+	var cand []int
+	var scand string
+
+	for i := 0; ; i++ {
+		cand = shuffle.Shuffle(data)
+		scand = shuffle.SliceToString(shuffle.IntToStrForSlice(cand))
+		comp := gosql.NLog(i, db)
+
+		if scand == comp {
+			continue
+		} else {
+			break
 		}
 	}
+
+	fmt.Println(cand)
 }
