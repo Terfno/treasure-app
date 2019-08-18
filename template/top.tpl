@@ -36,6 +36,44 @@
         margin: 0%;
       }
 
+      .mid {
+        background: var(--gradient_b);
+        height: 80vh;
+        width: 100vw;
+      }
+
+      .service {
+        color: var(--white);
+        font-family: 'Oswald', sans-serif;
+      }
+
+      .concept {
+        color: var(--white);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+      }
+
+      .message {
+        color: var(--white);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+      }
+
+      .foot {
+        position: relative;
+        height: 10vh;
+        widows: 100vw;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 100;
+      }
+
+      .copyright {
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        text-align: center;
+      }
+
       h1 {
         font-size: 35pt;
         margin: 0%;
@@ -64,51 +102,23 @@
         INTER MEDIUS
       </div>
     </div>
-    <div style="
-    background: var(--gradient_b);
-    height: 80vh;
-    width: 100vw;
-    ">
-      <div style="
-      color: var(--white);
-      font-family: 'Oswald', sans-serif;
-      ">
+    <div class="mid">
+      <div class="service">
         <h1>{{.Service}}</h1>
       </div>
-      <div style="
-      color: var(--white);
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
-      ">
+      <div class="concept">
         <h2>It is an application that changes your seat to something nice.</h2>
       </div>
-      <div style="
-      color: var(--white);
-      font-family: 'Roboto', sans-serif;
-      font-weight: 100;">
+      <div class="message">
         <p>Hold past seat information and carry out seat replacement without duplication.
         </p>
       </div>
-      <div style="
-      color: var(--white);
-      font-family: 'Roboto', sans-serif;
-      font-weight: 100;">
+      <div class="message">
         <p>You can also browse past seat information.</p>
       </div>
     </div>
-    <div style="
-    position: relative;
-    height: 10vh;
-    widows: 100vw;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 100;
-    ">
-      <p style="
-      position:absolute;
-      bottom: 0%;
-      width: 100%;
-      text-align: center;
-      ">copyright © 2019 Takahito Sueda terfno All Rights Reserved.</p>
+    <div class="foot">
+      <p class="copyright">copyright © 2019 Takahito Sueda terfno All Rights Reserved.</p>
     </div>
   </body>
 
